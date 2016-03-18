@@ -98,7 +98,7 @@ func main() {
 		}
 		t2 := time.Now()
 
-		fmt.Println("the sorting process costs ", t2.Sub(t1), " to complete.")
+		fmt.Println("sorting process costs ", t2.Sub(t1), " to complete.")
 
 		writeValues(values, *outfile)
 	} else {
