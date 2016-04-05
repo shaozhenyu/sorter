@@ -12,6 +12,7 @@ import (
 
 import (
 	"algorithms/bubblesort"
+	"algorithms/heapsort"
 	"algorithms/mergesort"
 	"algorithms/qsort"
 )
@@ -96,6 +97,8 @@ func main() {
 			bubblesort.BubbleSort(values)
 		case "mergesort":
 			mergesort.MergeSort(values)
+		case "heapsort":
+			heapsort.HeapSort(values)
 		default:
 			fmt.Println("Sorting algorithm ", *algorithm, " is either unknow or unsupported.")
 		}
@@ -107,5 +110,4 @@ func main() {
 	} else {
 		fmt.Println(err)
 	}
-
 }
