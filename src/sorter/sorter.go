@@ -16,6 +16,7 @@ import (
 	"algorithms/mergesort"
 	"algorithms/qsort"
 	"algorithms/shellsort"
+	"algorithms/simpleselectsort"
 )
 
 var infile *string = flag.String("i", "infile", "File contains values for sorting")
@@ -102,6 +103,8 @@ func main() {
 			heapsort.HeapSort(values)
 		case "shellsort":
 			shellsort.ShellSort(values)
+		case "simpleselectsort":
+			simpleselectsort.SimpleSelectSort(values)
 
 		default:
 			fmt.Println("Sorting algorithm ", *algorithm, " is either unknow or unsupported.")
