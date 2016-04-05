@@ -15,6 +15,7 @@ import (
 	"algorithms/heapsort"
 	"algorithms/mergesort"
 	"algorithms/qsort"
+	"algorithms/shellsort"
 )
 
 var infile *string = flag.String("i", "infile", "File contains values for sorting")
@@ -99,6 +100,9 @@ func main() {
 			mergesort.MergeSort(values)
 		case "heapsort":
 			heapsort.HeapSort(values)
+		case "shellsort":
+			shellsort.ShellSort(values)
+
 		default:
 			fmt.Println("Sorting algorithm ", *algorithm, " is either unknow or unsupported.")
 		}
